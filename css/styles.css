@@ -78,3 +78,43 @@ header button {
     line-height: 150%;
     border-radius: 32px;
 }
+
+.s-hero {
+    width: 100%;
+    background-image: url("../img/bg-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80rem;
+    padding-top: 11.2rem;
+    padding-bottom: 14.3rem;
+}
+
+.s-hero .left {
+    width: 100%;
+    max-width: 62.2rem;
+}
+
+.s-hero .left .plataform {
+    display: flex;
+    margin-bottom: 2.4rem;
+}
+
+.s-hero .left .plataform span {
+    color: #C0C0CC;
+    font-size: 1.2rem;
+    line-height: 150%;
+    background: #1B1B21;
+    padding: 0.375rem 0.75rem;
+    border-radius: 4px 0 0 4px;
+}
+
+.s-hero .left .plataform strong {
+    border-radius: 0 4px 4px 0;
+    background: var(--gray-dark-04, #25252E);
+    padding: 0.6rem 1rem;
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 150%; 
+}
