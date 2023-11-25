@@ -374,7 +374,29 @@ header button {
     right: 0;
 }
 
-.s-vilao
+.s-vilao {
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-vilao h2 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.s-vilao p {
+    color: var(--gray-light-02, #CECED9);
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 150%;
+}
 
 footer {
     position: relative;
