@@ -247,6 +247,22 @@ header button {
     padding-top: 8rem;
     padding-bottom: 6.4rem;
     overflow: hidden;
+    position: relative;
+}
+
+.s-videos:before {
+    content: "";
+    width: 33.4rem;
+    height: 34.4rem;
+    background: linear-gradient(270deg, #060608 -3.29%, rgba(6, 6, 8, 0.00) 64.25%);
+    position: absolute;
+    top: 8.9rem;
+    right: 0;
+    z-index: 5;
+}
+
+.s-videos .container {
+    position: relative;
 }
 
 .s-videos .top {
@@ -335,6 +351,30 @@ header button {
     font-weight: 500;
     line-height: 150%;
 }
+
+.s-videos .btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 13.3rem;
+    z-index: 10;
+    transition: opacity .3s ease;
+}
+
+.s-videos .btn.swiper-button-disabled {
+    opacity: 0;
+}
+
+.s-videos .btn-prev {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.s-videos .btn-next {
+    right: 0;
+}
+
+.s-vilao
 
 footer {
     position: relative;
