@@ -51,6 +51,7 @@ header {
     top: 0;
     background-color: rgba(0, 4, 7, 0.90);
     backdrop-filter: blur(4px);
+    z-index: 20;
 }
 
 header .container {
@@ -68,6 +69,11 @@ header nav a {
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 150%;
+    transition: color .3s ease;
+}
+
+header nav a:hover {
+    color: #F55827;
 }
 
 header button {
@@ -87,12 +93,25 @@ header button:hover {
 }
 
 .s-hero {
+    position: relative;
     width: 100%;
     background: url("../img/bg-hero.jpg") no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     height: 80rem;
     padding-top: 11.2rem;
     padding-bottom: 14.3rem;
+}
+.s-hero:after {
+    content: "";
+    width: 100%;
+    height: 21.6rem;
+    background: linear-gradient(180deg, #060608 0%, rgba(0, 4, 7, 0.00) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotate(180deg);
 }
 
 .s-hero .container {
@@ -104,6 +123,7 @@ header button:hover {
 .s-hero .left {
     width: 100%;
     max-width: 62.2rem;
+    animation: FadeLeft 1s forwards;
 }
 
 .s-hero .left .plataform {
@@ -168,6 +188,12 @@ header button:hover {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 150%;
+    transition: all .3s ease;
+}
+
+.s-hero .left .value .btns .btn-cart:hover {
+    background-color: #CF3302;
+    box-shadow: 0px 0px 0px 3px rgba(245, 88, 39, 0.30);
 }
 
 .s-hero .left .value .btns .btn-favorite {
@@ -178,6 +204,17 @@ header button:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.s-hero .left .value .btns .btn-favorite:hover {
+    background-color: #FFF;
+    color: #101014;
+    box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.30);
+}
+
+.s-hero .left .value .btns .btn-favorite:hover img {
+    filter: invert(1);
 }
 
 .s-hero .left ul {
@@ -225,6 +262,7 @@ header button:hover {
     align-items: flex-end;
     gap: 1.6rem;
     margin-top: 4.3rem;
+    animation: FadeRight 1s forwards;
 }
 
 .s-hero .right span {
@@ -382,6 +420,7 @@ header button:hover {
 }
 
 .s-vilao {
+    position: relative;
     width: 100%;
     height: 80rem;
     display: flex;
@@ -392,6 +431,29 @@ header button:hover {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.s-vilao:before {
+    content: "";
+    width: 100%;
+    height: 21.6rem;
+    background: linear-gradient(180deg, #060608 0%, rgba(0, 4, 7, 0.00) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.s-vilao:after {
+    content: "";
+    width: 100%;
+    height: 21.6rem;
+    background: linear-gradient(180deg, #060608 0%, rgba(0, 4, 7, 0.00) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transform: rotate(180deg);
 }
 
 .s-vilao h2 {
@@ -492,5 +554,27 @@ footer .right span {
     }
     100% {
         background-image: url(../img/bg/01.png);
+    }
+}
+
+@keyframes FadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes FadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
