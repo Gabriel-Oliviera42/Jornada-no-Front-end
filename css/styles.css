@@ -112,6 +112,7 @@ header button:hover {
     left: 0;
     z-index: 2;
     transform: rotate(180deg);
+    pointer-events: none;
 }
 
 .s-hero .container {
@@ -121,9 +122,11 @@ header button:hover {
 }
 
 .s-hero .left {
+    position: relative;
     width: 100%;
     max-width: 62.2rem;
     animation: FadeLeft 1s forwards;
+    z-index: 10;
 }
 
 .s-hero .left .plataform {
@@ -576,5 +579,97 @@ footer .right span {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .s-hero {
+        height: auto;
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .s-videos {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .s-videos .btn {
+        display: none;
+    }
+
+    .s-vilao {
+        height: 55rem;
+    }
+
+    footer {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+@media (max-width: 991px) {
+
+    header nav {
+        display: none;
+    }
+
+    .s-hero .left {
+        max-width: 100%;
+    }
+
+    .s-hero .right {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+
+    header .logo {
+        max-width: 12.6rem;
+    }
+
+    header buttom {
+        padding: .95rem 2rem;
+    }
+
+    .s-hero {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        background-size: 1120px;
+        background-position-x: 62%;
+    }
+
+    .s-hero .left h1 {
+        font-size: 4.2rem;
+        max-width: 84%;
+        line-height: 120%;
+    }
+
+    .s-hero .left .description {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .s-hero .left .value h3 {
+        margin-bottom: 4rem;
+    }
+
+    .s-hero .left ul p {
+        font-size: 1.4rem;
+    }
+
+    .s-hero .left ul:nth-child(2) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .s-hero .left ul li {
+        gap: 1rem;
+    }
+
+    .s-hero .left ul {
+        gap: 1rem;
     }
 }
