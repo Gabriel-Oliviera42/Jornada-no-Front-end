@@ -102,6 +102,7 @@ header button:hover {
     padding-top: 11.2rem;
     padding-bottom: 14.3rem;
 }
+
 .s-hero:after {
     content: "";
     width: 100%;
